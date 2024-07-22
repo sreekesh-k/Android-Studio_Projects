@@ -12,13 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String[] contacts = new String[26];
-        char alf = 'a';
-        for(int i = 0; i < contacts.length; i++){
-            contacts[i] =  (i+1) + "." + alf;
-            alf++;
-        }
-
+        String[] contacts = {"Sreekesh","Vishnu","Sharon","Sarath","Manu","Jees","Sam","Deepak","Varghese","Ridha","Sneha","Sreekumar"};
         ListView contactListView = findViewById(R.id.contactListView);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, contacts);
