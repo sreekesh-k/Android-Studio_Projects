@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Create an intent that will open the AlarmActivity when the alarm goes off
         Intent intent = new Intent(MainActivity.this, AlarmActivity.class);
-        pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        pendingIntent = PendingIntent.getActivity(MainActivity.this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         // Set the alarm
         alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
